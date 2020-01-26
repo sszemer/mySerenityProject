@@ -15,3 +15,5 @@ j
 :src/test/java/org/example/steps/serenity/EndUserSteps.java,8\7\878c71984cf2a296acc93dd4bb1eadc75891e7da
 u
 Esrc/test/resources/stories/consult_dictionary/LookupADefinition.story,0\7\071ff84694d31b22df3939508218be9311740eeb
+C
+serenity.properties,2\5\25f1bbdc8dba7ca4a4b90251f1ef69621b24a28c
