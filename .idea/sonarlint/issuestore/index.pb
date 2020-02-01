@@ -17,3 +17,5 @@ u
 Esrc/test/resources/stories/consult_dictionary/LookupADefinition.story,0\7\071ff84694d31b22df3939508218be9311740eeb
 C
 serenity.properties,2\5\25f1bbdc8dba7ca4a4b90251f1ef69621b24a28c
+E
+mySerenityProject.iml,f\6\f63748a745ce93f90c99a404720852e761274b83
