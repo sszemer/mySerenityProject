@@ -32,7 +32,7 @@ public class DictionaryPage extends PageObject {
     public List<String> getDefinitions() {
         WebElementFacade definitionList = find(By.tagName("ol"));
         return definitionList.findElements(By.tagName("li")).stream()
-                .map( element -> element.getText() )
+                .map(WebElement::getText)
                 .collect(Collectors.toList());
     }
 }

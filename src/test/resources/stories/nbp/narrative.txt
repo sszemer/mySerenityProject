@@ -1,0 +1,4 @@
+Search for currencies
+In order to buy currencies
+As a user
+I want to be able to look up the currencies in bank
