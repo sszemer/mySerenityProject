@@ -12,8 +12,6 @@ public class DefinitionSteps {
 
     @Steps
     EndUserSteps endUser;
-    @Steps
-    RESTSteps restSteps;
 
     @Given("the user is on the Wikionary home page")
     public void givenTheUserIsOnTheWikionaryHomePage() {
@@ -28,11 +26,6 @@ public class DefinitionSteps {
     @Then("they should see the definition '$definition'")
     public void thenTheyShouldSeeADefinitionContainingTheWords(String definition) {
         endUser.should_see_definition(definition);
-    }
-
-    @When("Thai currency is $THB")
-    public void thaiCurrencyIsTBH(String thb){
-        restSteps.checkThaiCurrency(thb);
     }
 
 }

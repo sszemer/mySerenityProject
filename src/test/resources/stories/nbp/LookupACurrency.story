@@ -9,4 +9,6 @@ Scenario: Looking up the currency of thailand
 Meta:
 @nbp
 
-When Thai currency is THB
+Given We know the current rate for THB
+When The rate is less than 0.13
+Then We can go on vacation
