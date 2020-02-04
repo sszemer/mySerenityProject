@@ -1,0 +1,96 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://api.nbp.pl/api/exchangerates/tables/A/?format=json",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "table",
+      "no",
+      "effectiveDate",
+      "rates"
+    ],
+    "properties": {
+      "table": {
+        "$id": "#/items/properties/table",
+        "type": "string",
+        "title": "The Table Schema",
+        "default": "",
+        "examples": [
+          "A"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "no": {
+        "$id": "#/items/properties/no",
+        "type": "string",
+        "title": "The No Schema",
+        "default": "",
+        "examples": [
+          "022/A/NBP/2020"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "effectiveDate": {
+        "$id": "#/items/properties/effectiveDate",
+        "type": "string",
+        "title": "The Effectivedate Schema",
+        "default": "",
+        "examples": [
+          "2020-02-03"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "rates": {
+        "$id": "#/items/properties/rates",
+        "type": "array",
+        "title": "The Rates Schema",
+        "items": {
+          "$id": "#/items/properties/rates/items",
+          "type": "object",
+          "title": "The Items Schema",
+          "required": [
+            "currency",
+            "code",
+            "mid"
+          ],
+          "properties": {
+            "currency": {
+              "$id": "#/items/properties/rates/items/properties/currency",
+              "type": "string",
+              "title": "The Currency Schema",
+              "default": "",
+              "examples": [
+                "bat (Tajlandia)"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "code": {
+              "$id": "#/items/properties/rates/items/properties/code",
+              "type": "string",
+              "title": "The Code Schema",
+              "default": "",
+              "examples": [
+                "THB"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "mid": {
+              "$id": "#/items/properties/rates/items/properties/mid",
+              "type": "number",
+              "title": "The Mid Schema",
+              "default": 0.0,
+              "examples": [
+                0.1251
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
