@@ -10,5 +10,5 @@ Meta:
 @nbp
 
 Given We know the current rate for THB
-When The rate is less than 0.13
+When The rate is less than 0.1300
 Then We can go on vacation
