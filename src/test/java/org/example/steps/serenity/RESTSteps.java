@@ -1,7 +1,9 @@
 package org.example.steps.serenity;
 
 import io.restassured.RestAssured;
+import io.restassured.mapper.ObjectMapper;
 import net.thucydides.core.annotations.Step;
+import org.example.pojos.Nbp;
 import org.junit.Assert;
 
 import java.math.BigDecimal;
@@ -17,6 +19,7 @@ public class RESTSteps {
     String address = "http://api.nbp.pl/api/exchangerates/tables/A/?format=json";
     String schema = "REST/schemas/nbp.json";
     BigDecimal rate;
+    Nbp[] response;
 
     @Step
     public void getCurrencyRateFor(String currency) {
@@ -24,6 +27,9 @@ public class RESTSteps {
         rate = given().config(RestAssured.config().jsonConfig(jsonConfig().numberReturnType(BIG_DECIMAL)))
                 .and().get(address)
                 .then().statusCode(200).extract().jsonPath().get("[0].rates.find {it.code='" + currency + "'}.mid");
+
+        response = get(address).body().as(Nbp[].class);
+        System.err.println(response[0].getTable());
     }
 
     @Step
