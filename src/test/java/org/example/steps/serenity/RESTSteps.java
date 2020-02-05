@@ -2,7 +2,6 @@ package org.example.steps.serenity;
 
 import io.restassured.RestAssured;
 import io.restassured.common.mapper.TypeRef;
-import io.restassured.mapper.ObjectMapper;
 import net.thucydides.core.annotations.Step;
 import org.example.pojos.Nbp;
 import org.junit.Assert;
@@ -10,12 +9,15 @@ import org.junit.Assert;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.get;
+import static io.restassured.RestAssured.given;
 import static io.restassured.config.JsonConfig.jsonConfig;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static io.restassured.path.json.config.JsonPathConfig.NumberReturnType.BIG_DECIMAL;
-import static org.hamcrest.Matchers.*;
-import static io.restassured.module.jsv.JsonSchemaValidator.*;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.lessThan;
 
 public class RESTSteps {
 
@@ -32,7 +34,7 @@ public class RESTSteps {
                 .then().statusCode(200).extract().jsonPath().get("[0].rates.find {it.code='" + currency + "'}.mid");
 //        deserializacja
         response = get(address).body().as(Nbp[].class);
-        System.err.println(response[0].getTable());
+        Objects.requireNonNull(response[0].getRates().stream().filter(rate1 -> rate1.getCode().equals(currency)).findAny().orElse(null)).getMid();
 //        deserializaca generyczna
         List<Map<String,Object>> genericResponse = get(address).as(new TypeRef<List<Map<String, Object>>>() {});
         Assert.assertThat(genericResponse.get(0).get("table"), equalTo("A"));
