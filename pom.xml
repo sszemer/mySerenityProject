@@ -38,6 +38,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.igniterealtime.smack</groupId>
+            <artifactId>smack-core</artifactId>
+            <version>4.0.6</version>
+        </dependency>
+        <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>4.2.0</version>
@@ -83,6 +88,16 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.mock-server/mockserver-netty -->
+        <dependency>
+            <groupId>org.mock-server</groupId>
+            <artifactId>mockserver-netty</artifactId>
+            <version>5.9.0</version>
+        </dependency>     <dependency>
+            <groupId>org.mock-server</groupId>
+            <artifactId>mockserver-client-java</artifactId>
+            <version>5.9.0</version>
         </dependency>
     </dependencies>
     <build>
@@ -135,6 +150,33 @@
                         <phase>post-integration-test</phase>
                         <goals>
                             <goal>aggregate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.mock-server</groupId>
+                <artifactId>mockserver-maven-plugin</artifactId>
+                <version>5.9.0</version>
+                <configuration>
+                    <serverPort>1080</serverPort>
+                    <proxyPort>1090</proxyPort>
+                    <logLevel>DEBUG</logLevel>
+<!--                    <initializationClass>org.mockserver.maven.ExampleInitializationClass</initializationClass>-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>process-test-classes</id>
+                        <phase>process-test-classes</phase>
+                        <goals>
+                            <goal>start</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>verify</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>stop</goal>
                         </goals>
                     </execution>
                 </executions>

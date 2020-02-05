@@ -2,9 +2,7 @@ package org.example.steps;
 
 import net.thucydides.core.annotations.Steps;
 import org.example.steps.serenity.RESTSteps;
-import org.jbehave.core.annotations.Given;
-import org.jbehave.core.annotations.Then;
-import org.jbehave.core.annotations.When;
+import org.jbehave.core.annotations.*;
 
 import java.math.BigDecimal;
 
