@@ -31,7 +31,7 @@ public class MockServerConfigProvider {
                                 "\t\t\t{\n" +
                                 "\t\t\t\t\"currency\": \"bat (Tajlandia)\",\n" +
                                 "\t\t\t\t\"code\": \"THB\",\n" +
-                                "\t\t\t\t\"mid\": 0.1220\n" +
+                                "\t\t\t\t\"mid\": 0.1420\n" +
                                 "\t\t\t},\n" +
                                 "\t\t\t{\n" +
                                 "\t\t\t\t\"currency\": \"dolar amerykański\",\n" +

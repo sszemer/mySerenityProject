@@ -32,11 +32,12 @@ public class RESTSteps {
     String mock = "localhost:8080";
     String schema = "REST/schemas/nbp.json";
     BigDecimal rate;
+    String currency;
     ResponseValidationFailureListener emailOnFailure = (reqSpec, respSpec, resp) -> System.err.println("Important test failed! Status code was: " + resp.statusCode());
 
     @Step
     public void getCurrencyRateFor(String currency) {
-
+        this.currency=currency;
         ResponseSpecBuilder builder = new ResponseSpecBuilder();
         builder.expectStatusCode(200);
         builder.expectResponseTime(lessThan(1L), TimeUnit.SECONDS);
@@ -75,7 +76,7 @@ public class RESTSteps {
                 .get(address)
         .then()
                 .log().ifError()
-                .body("[0].rates.find {it.code='" + rateThreshold + "'}.mid", lessThan(rateThreshold))
+                .body("[0].rates.find {it.code='" + currency + "'}.mid", lessThan(rateThreshold))
                 .time(lessThan(1L), TimeUnit.SECONDS); // to nie jest najwiarygodniejsze
         Assert.assertThat(rate, lessThan(rateThreshold));
     }
