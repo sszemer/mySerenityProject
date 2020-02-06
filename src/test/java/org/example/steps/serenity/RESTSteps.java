@@ -26,8 +26,8 @@ import static org.hamcrest.Matchers.lessThan;
 
 public class RESTSteps {
 
-    String address = "http://api.nbp.pl/api/exchangerates/tables/A/?format=json";
-//    String address = "http://localhost:8080/api/exchangerates/tables/A/?format=json";
+//    String address = "http://api.nbp.pl/api/exchangerates/tables/A/?format=json";
+    String address = "http://localhost:1080/api/exchangerates/tables/A/?format=json";
     String proxy = "api.nbp.pl";
     String mock = "localhost:8080";
     String schema = "REST/schemas/nbp.json";
