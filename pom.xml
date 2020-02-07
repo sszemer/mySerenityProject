@@ -7,33 +7,36 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Sample Serenity project using JBehave and WebDriver</name>
+    <name>Sample Serenity project using JBehave, WebDriver, RestAssured and Mockserver</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.version>2.0.48</serenity.version>
         <serenity.jbehave.version>1.46.0</serenity.jbehave.version>
+        <mockserver.host>localhost</mockserver.host>
+        <mockserver.port>1080</mockserver.port>
+        <mockserver.skip>false</mockserver.skip>
     </properties>
 
     <repositories>
-      <repository>
-        <snapshots>
-        <enabled>false</enabled>
-        </snapshots>
-        <id>central</id>
-        <name>bintray</name>
-        <url>https://jcenter.bintray.com</url>
-      </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>bintray</name>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
     </repositories>
     <pluginRepositories>
-      <pluginRepository>
-        <snapshots>
-        <enabled>false</enabled>
-        </snapshots>
-        <id>central</id>
-        <name>bintray-plugins</name>
-        <url>https://jcenter.bintray.com</url>
-      </pluginRepository>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>bintray-plugins</name>
+            <url>https://jcenter.bintray.com</url>
+        </pluginRepository>
     </pluginRepositories>
 
     <dependencies>
@@ -94,14 +97,50 @@
             <groupId>org.mock-server</groupId>
             <artifactId>mockserver-netty</artifactId>
             <version>5.9.0</version>
-        </dependency>     <dependency>
+        </dependency>
+        <dependency>
             <groupId>org.mock-server</groupId>
             <artifactId>mockserver-client-java</artifactId>
             <version>5.9.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.jbehave</groupId>
+            <artifactId>jbehave-core</artifactId>
+            <version>4.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.1.1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <outputFile>${project.build.outputDirectory}/my.properties</outputFile>
+                    <properties/>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>write-project-properties</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -159,10 +198,11 @@
                 <artifactId>mockserver-maven-plugin</artifactId>
                 <version>5.9.0</version>
                 <configuration>
-                    <serverPort>1080</serverPort>
+                    <serverPort>${mockserver.port}</serverPort>
                     <proxyPort>1090</proxyPort>
                     <logLevel>WARN</logLevel>
-<!--                    <initializationClass>org.mockserver.maven.ExampleInitializationClass</initializationClass>-->
+                    <skip>${mockserver.skip}</skip>
+                    <!--                    <initializationClass>org.mockserver.maven.ExampleInitializationClass</initializationClass>-->
                 </configuration>
                 <executions>
                     <execution>

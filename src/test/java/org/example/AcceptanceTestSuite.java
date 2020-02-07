@@ -8,7 +8,7 @@ import org.jbehave.core.annotations.BeforeStories;
 
 @Metafilter("+nbp")
 public class AcceptanceTestSuite extends SerenityStories {
-
+//clean verify serenity:aggregate properties:write-project-properties -Dmaven.test.failure.ignore=true -DforkCount=0 test -Dmockserver.skip=true
     @BeforeStories
     public void beforeStories(){
         System.err.println("before stories");
