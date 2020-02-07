@@ -12,7 +12,7 @@ public class NbpSteps {
     RESTSteps restSteps;
 
     @Given("We know the current rate for $currencyCode")
-    public void getCurrencyRateFor(String currencyCode){        ;
+    public void getCurrencyRateFor(String currencyCode){
         restSteps.rateIs(restSteps.getCurrencyRateFor(currencyCode));
     }
 

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfExchangeRatesTable xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ExchangeRatesTable>
+        <Table>A</Table>
+        <No>026/A/NBP/2020</No>
+        <EffectiveDate>2020-02-07</EffectiveDate>
+        <Rates>
+            <Rate>
+                <Currency>bat (Tajlandia)</Currency>
+                <Code>THB</Code>
+                <Mid>0.1244</Mid>
+            </Rate>
+            <Rate>
+                <Currency>dolar amerykański</Currency>
+                <Code>USD</Code>
+                <Mid>3.8947</Mid>
+            </Rate>
+            <Rate>
+                <Currency>dolar australijski</Currency>
+                <Code>AUD</Code>
+                <Mid>2.6031</Mid>
+            </Rate>
+            <Rate>
+                <Currency>dolar Hongkongu</Currency>
+                <Code>HKD</Code>
+                <Mid>0.5018</Mid>
+            </Rate>
+            <Rate>
+                <Currency>dolar kanadyjski</Currency>
+                <Code>CAD</Code>
+                <Mid>2.9260</Mid>
+            </Rate>
+            <Rate>
+                <Currency>dolar nowozelandzki</Currency>
+                <Code>NZD</Code>
+                <Mid>2.4991</Mid>
+            </Rate>
+            <Rate>
+                <Currency>dolar singapurski</Currency>
+                <Code>SGD</Code>
+                <Mid>2.8000</Mid>
+            </Rate>
+            <Rate>
+                <Currency>euro</Currency>
+                <Code>EUR</Code>
+                <Mid>4.2664</Mid>
+            </Rate>
+            <Rate>
+                <Currency>forint (Węgry)</Currency>
+                <Code>HUF</Code>
+                <Mid>0.012589</Mid>
+            </Rate>
+            <Rate>
+                <Currency>frank szwajcarski</Currency>
+                <Code>CHF</Code>
+                <Mid>3.9908</Mid>
+            </Rate>
+            <Rate>
+                <Currency>funt szterling</Currency>
+                <Code>GBP</Code>
+                <Mid>5.0359</Mid>
+            </Rate>
+            <Rate>
+                <Currency>hrywna (Ukraina)</Currency>
+                <Code>UAH</Code>
+                <Mid>0.1587</Mid>
+            </Rate>
+            <Rate>
+                <Currency>jen (Japonia)</Currency>
+                <Code>JPY</Code>
+                <Mid>0.035474</Mid>
+            </Rate>
+            <Rate>
+                <Currency>korona czeska</Currency>
+                <Code>CZK</Code>
+                <Mid>0.1704</Mid>
+            </Rate>
+            <Rate>
+                <Currency>korona duńska</Currency>
+                <Code>DKK</Code>
+                <Mid>0.5709</Mid>
+            </Rate>
+            <Rate>
+                <Currency>korona islandzka</Currency>
+                <Code>ISK</Code>
+                <Mid>0.030894</Mid>
+            </Rate>
+            <Rate>
+                <Currency>korona norweska</Currency>
+                <Code>NOK</Code>
+                <Mid>0.4200</Mid>
+            </Rate>
+            <Rate>
+                <Currency>korona szwedzka</Currency>
+                <Code>SEK</Code>
+                <Mid>0.4039</Mid>
+            </Rate>
+            <Rate>
+                <Currency>kuna (Chorwacja)</Currency>
+                <Code>HRK</Code>
+                <Mid>0.5722</Mid>
+            </Rate>
+            <Rate>
+                <Currency>lej rumuński</Currency>
+                <Code>RON</Code>
+                <Mid>0.8955</Mid>
+            </Rate>
+            <Rate>
+                <Currency>lew (Bułgaria)</Currency>
+                <Code>BGN</Code>
+                <Mid>2.1814</Mid>
+            </Rate>
+            <Rate>
+                <Currency>lira turecka</Currency>
+                <Code>TRY</Code>
+                <Mid>0.6503</Mid>
+            </Rate>
+            <Rate>
+                <Currency>nowy izraelski szekel</Currency>
+                <Code>ILS</Code>
+                <Mid>1.1369</Mid>
+            </Rate>
+            <Rate>
+                <Currency>peso chilijskie</Currency>
+                <Code>CLP</Code>
+                <Mid>0.004969</Mid>
+            </Rate>
+            <Rate>
+                <Currency>peso filipińskie</Currency>
+                <Code>PHP</Code>
+                <Mid>0.0765</Mid>
+            </Rate>
+            <Rate>
+                <Currency>peso meksykańskie</Currency>
+                <Code>MXN</Code>
+                <Mid>0.2079</Mid>
+            </Rate>
+            <Rate>
+                <Currency>rand (Republika Południowej Afryki)</Currency>
+                <Code>ZAR</Code>
+                <Mid>0.2591</Mid>
+            </Rate>
+            <Rate>
+                <Currency>real (Brazylia)</Currency>
+                <Code>BRL</Code>
+                <Mid>0.9095</Mid>
+            </Rate>
+            <Rate>
+                <Currency>ringgit (Malezja)</Currency>
+                <Code>MYR</Code>
+                <Mid>0.9412</Mid>
+            </Rate>
+            <Rate>
+                <Currency>rubel rosyjski</Currency>
+                <Code>RUB</Code>
+                <Mid>0.0611</Mid>
+            </Rate>
+            <Rate>
+                <Currency>rupia indonezyjska</Currency>
+                <Code>IDR</Code>
+                <Mid>0.0002848</Mid>
+            </Rate>
+            <Rate>
+                <Currency>rupia indyjska</Currency>
+                <Code>INR</Code>
+                <Mid>0.054481</Mid>
+            </Rate>
+            <Rate>
+                <Currency>won południowokoreański</Currency>
+                <Code>KRW</Code>
+                <Mid>0.00326</Mid>
+            </Rate>
+            <Rate>
+                <Currency>yuan renminbi (Chiny)</Currency>
+                <Code>CNY</Code>
+                <Mid>0.5573</Mid>
+            </Rate>
+            <Rate>
+                <Currency>SDR (MFW)</Currency>
+                <Code>XDR</Code>
+                <Mid>5.3260</Mid>
+            </Rate>
+        </Rates>
+    </ExchangeRatesTable>
+</ArrayOfExchangeRatesTable>

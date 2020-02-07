@@ -1,0 +1,28 @@
+[
+  {
+    "httpRequest": 	{
+      "method" : "GET",
+      "path" : "/api/exchangerates/tables/A/",
+      "queryStringParameters" : {
+        "format" : [ "json" ]
+      },
+      "headers" : {
+        "Accept" : [ "*/*" ],
+        "Host" : [ "localhost:1080" ],
+        "Connection" : [ "Keep-Alive" ],
+        "User-Agent" : [ "Apache-HttpClient/4.5.3 (Java/11.0.5)" ],
+        "Accept-Encoding" : [ "gzip,deflate" ],
+        "content-length" : [ "0" ]
+      },
+      "keepAlive" : true,
+      "secure" : false
+    },
+    "httpResponse": {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body": "[\n\t{\n\t\t\"table\": \"A\",\n\t\t\"no\": \"022/A/NBP/2020\",\n\t\t\"effectiveDate\": \"2020-02-03\",\n\t\t\"rates\": [\n\t\t\t{\n\t\t\t\t\"currency\": \"bat (Tajlandia)\",\n\t\t\t\t\"code\": \"THB\",\n\t\t\t\t\"mid\": 0.1251\n\t\t\t}\n\t\t]\n\t}\n]"
+    }
+  }
+]
