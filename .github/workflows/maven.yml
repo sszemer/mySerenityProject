@@ -14,4 +14,4 @@ jobs:
       with:
         java-version: '11.0.5'
     - name: Build with Maven
-      run: mvn -B package --file pom.xml clean verify -Dmockserver.initializationJsonPath=src/test/resources/REST/mockserver/initialize.json
+      run: mvn clean verify serenity:aggregate properties:write-project-properties -Dmaven.test.failure.ignore=true -Dmockserver.skip=false -DforkCount=0 test -Dmockserver.initializationJsonPath=src/test/resources/REST/mockserver/initialize.json
