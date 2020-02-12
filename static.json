@@ -1,0 +1,4 @@
+{
+  "root": "target/site/serenity",
+  "clean_urls": false
+}
