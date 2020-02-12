@@ -5,17 +5,7 @@
       "path" : "/api/exchangerates/tables/A/",
       "queryStringParameters" : {
         "format" : [ "json" ]
-      },
-      "headers" : {
-        "Accept" : [ "*/*" ],
-        "Host" : [ "localhost:1080" ],
-        "Connection" : [ "Keep-Alive" ],
-        "User-Agent" : [ "Apache-HttpClient/4.5.3 (Java/11.0.5)" ],
-        "Accept-Encoding" : [ "gzip,deflate" ],
-        "content-length" : [ "0" ]
-      },
-      "keepAlive" : true,
-      "secure" : false
+      }
     },
     "httpResponse": {
       "statusCode" : 200,
