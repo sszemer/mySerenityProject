@@ -8,6 +8,7 @@ Scenario: Looking up the currency of thailand
 
 Meta:
 @nbp
+@tag id: test-0001
 
 Given We know the current rate for THB
 When The rate is less than 0.1300
